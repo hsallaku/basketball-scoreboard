@@ -1,0 +1,94 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container prevent-select">
+            <div class="main">
+                <div class="main-row">  
+                    <div class="column">
+                        <h3 class="column-title">HOME</h3>
+                        <div class="column-score black-screen" id="home-screen-el">
+                            <p id="home-score-el">0</p>
+                        </div>
+                        <div class="column-additional-info black-screen">
+                            <p>TO: <span id="home-to-el">0</span></p>
+                            <p>FO: <span id="home-fo-el">0</span></p>
+                        </div>
+                        <div class="column-buttons">
+                            <button class="score-button generic-btn" onclick="incrementHome(1)">+1</button>
+                            <button class="score-button generic-btn" onclick="incrementHome(2)">+2</button>
+                            <button class="score-button generic-btn" onclick="incrementHome(3)">+3</button>
+                        </div>
+                        <div class="column-buttons">
+                            <button class="score-button generic-btn" onclick="decrementHome(1)">-1</button>
+                            <button class="score-button generic-btn" onclick="decrementHome(2)">-2</button>
+                            <button class="score-button generic-btn" onclick="decrementHome(3)">-3</button>
+                        </div>
+                        <div class="column-buttons">
+                            <button class="score-button generic-btn" onclick="addTimeoutHome(1)">+TO</button>
+                            <button class="score-button generic-btn" onclick="removeTimeoutHome(1)">-TO</button>
+                        </div>
+                        <div class="column-buttons">
+                            <button class="score-button generic-btn" onclick="addFoulHome(1)"">+FO</button>
+                            <button class="score-button generic-btn" onclick="removeFoulHome(1)"">-FO</button>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3 class="column-title">TIMER</h3>
+                        <div class="column-timer black-screen">
+                            <p id="timer-el">
+                                <span id="minutes">00</span>:<span id="seconds">00</span>
+                            </p>
+                        </div>
+                        <div class="column-period black-screen">
+                            <p>P:<span id="period-counter">0</span></p>
+                        </div>
+                        <div class="column-buttons">
+                            <button id="start-button" class="generic-btn">Start</button>
+                            <button id="stop-button" class="generic-btn">Stop</button>
+                            <button id="reset-button" class="generic-btn">Reset</button>
+                        </div>
+                        <div class="column-buttons">
+                            <button id="inc-period-button" class="generic-btn" onclick="incPeriodCounter()">P+</button>
+                            <button id="dec-period-button" class="generic-btn" onclick="decPeriodCounter()">P-</button>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3 class="column-title">GUEST</h3>
+                        <div class="column-score black-screen" id="guest-screen-el">
+                            <p id="guest-score-el">0</p>
+                        </div>
+                        <div class="column-additional-info black-screen">
+                            <p>TO: <span id="guest-to-el">0</span></p>
+                            <p>FO: <span id="guest-fo-el">0</span></p>
+                        </div>
+                        <div class="column-buttons">
+                            <button class="score-button generic-btn" onclick="incrementGuest(1)">+1</button>
+                            <button class="score-button generic-btn" onclick="incrementGuest(2)">+2</button>
+                            <button class="score-button generic-btn" onclick="incrementGuest(3)">+3</button>
+                        </div>
+                        <div class="column-buttons">
+                            <button class="score-button generic-btn" onclick="decrementGuest(1)">-1</button>
+                            <button class="score-button generic-btn" onclick="decrementGuest(2)">-2</button>
+                            <button class="score-button generic-btn" onclick="decrementGuest(3)">-3</button>
+                        </div>
+                        <div class="column-buttons">
+                            <button class="score-button generic-btn" onclick="addTimeoutGuest(1)">+TO</button>
+                            <button class="score-button generic-btn" onclick="removeTimeoutGuest(1)">-TO</button>
+                        </div>
+                        <div class="column-buttons">
+                            <button class="score-button generic-btn" onclick="addFoulGuest(1)"">+FO</button>
+                            <button class="score-button generic-btn" onclick="removeFoulGuest(1)"">-FO</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="new-game-btn generic-btn" id="new-game-btn" onclick="newGame()">New Game</button>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+        <script src="timer.js"></script>
+    </body>
+</html>

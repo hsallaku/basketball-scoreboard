@@ -1,0 +1,237 @@
+@font-face{
+    src: url("fonts/CursedTimerUlil-Aznm.ttf");
+    font-family: CursedTimer;
+}
+
+body,html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+}
+
+body {
+    margin: 0px;
+    background: url("images/basketball-game.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container {
+    margin: auto;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 100px rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.column{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column-title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: 0px 0px 5px #fff;
+    line-height: 30px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 22px;
+    color: #fff;
+}
+
+.black-screen{
+    background-color: #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0px 20px;
+    color: #F94F6D;
+    text-shadow: 0px 0px 10px #F94F6D;
+    font-family: CursedTimer;
+}
+
+.column-score{
+    height: 120px;
+    width: 175px;
+    font-size: 90px;
+}
+
+.column-score p{
+    padding: 20px 0 0 0;
+}
+
+.column-timer{
+    width: 180px;
+    height: 120px;
+    font-size:50px;
+}
+
+.column-additional-info{
+    height: 70px;
+    width: 175px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.column-period{
+    margin-top: 20px;
+    font-size: 30px;
+    width: 100px;
+    height: 50px;
+}
+
+.column-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+}
+
+.score-button{
+    height: 50px;
+    width: 50px;
+}
+
+.generic-btn{
+    margin: 0px 8px;
+    font-family: CursedTimer;
+    font-size: 18px;
+    background: none;
+    border-style: none;
+    padding: 5px 0 0 0;
+    color: #D1D5DB;
+    border: 3px solid #9AABD8;
+    border-radius: 5px;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.2s;
+}
+
+
+.generic-btn:hover{
+    box-shadow: inset 0px 0px 3px #C4B5FD;
+    transform: scale(1.05);
+    transition: transform 0.2s;
+    color: #fff;
+    border: 3px solid #C4B5FD;
+}
+
+.generic-btn:active{
+    color: rgba(255, 255, 255, 0.9);
+    background-color: #C4B5FD;
+    border: 3px solid #C4B5FD;
+}
+
+.generic-btn:focus {
+    outline: none;
+}
+
+.new-game-btn{
+    font-size: 30px;
+    padding: 10px 15px 5px 15px;
+    color: #D1D5DB;
+    border: 3px solid #D1D5DB;
+}
+
+.new-game-btn:hover{
+    color: #fff;
+    border: 3px solid #fff;
+}
+
+.new-game-btn:active{
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    border: 3px solid #fff;
+}
+
+#start-button{
+    padding: 10px 10px 5px 10px;
+    color: #10B981;
+    border: 3px solid #10B981;
+}
+
+#start-button:hover{
+    color: #A7F3D0;
+    border: 3px solid #A7F3D0;
+}
+
+#start-button:active{
+    color: rgba(255, 255, 255, 0.9);
+    background-color: #A7F3D0;
+    border: 3px solid #A7F3D0;
+}
+
+#stop-button{
+    padding: 10px 10px 5px 10px;
+    color: #F43F5E;
+    border: 3px solid #F43F5E;
+}
+
+#stop-button:hover{
+    color: #FECDD3;
+    border: 3px solid #FECDD3;
+}
+
+#stop-button:active{
+    color: rgba(255, 255, 255, 0.9);
+    background-color: #FECDD3;
+    border: 3px solid #FECDD3;
+}
+
+#reset-button{
+    padding: 10px 10px 5px 10px;
+    color: #F59E0B;
+    border: 3px solid #F59E0B;
+}
+
+#reset-button:hover{
+    color: #FDE68A;
+    border: 3px solid #FDE68A;
+}
+
+#reset-button:active{
+    color: rgba(255, 255, 255, 0.9);
+    background-color: #FDE68A;
+    border: 3px solid #FDE68A;
+}
+
+#inc-period-button, #dec-period-button{
+    padding: 10px;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.leading-team{
+    box-shadow: 0px 0px 20px #F43F5E;
+}
